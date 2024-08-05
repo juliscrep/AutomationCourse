@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1098","login with user and pass incorrect -- @1.2 ","","Wed Jul 31 19:21:38 ART 2024","passed","Wed Jul 31 19:21:39 ART 2024","","","",""
+"","1330","login with user and pass correct -- @1.1 ","","Wed Jul 31 19:21:39 ART 2024","passed","Wed Jul 31 19:21:41 ART 2024","","","",""
+"","2576","login with user and pass incorrect -- @1.1 ","","Wed Jul 31 19:21:36 ART 2024","passed","Wed Jul 31 19:21:38 ART 2024","","","",""

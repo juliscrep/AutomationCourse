@@ -1,0 +1,7 @@
+pytest==8.2.2
+selenium==4.22.0
+webdriver-manager==4.0.1
+pytest-html==4.1.1
+ec==0.2.5
+behave==1.2.6
+allure-behave==2.13.5
