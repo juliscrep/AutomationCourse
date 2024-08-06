@@ -34,9 +34,9 @@ def step_impl(context, firstname, lastname, postalcode):
 
 @then(u'finalizes the purchase order')
 def step_impl(context):
-    #assert context.product_page.cart_list_not_empty(), "The cart list should not be empty"
-    #assert context.product_page.checkout_overview_text() == "Checkout: Overview", "Title is not expected"
-    #assert context.product_page.payment_information(), "The payment information should be visible"
-    #assert context.product_page.finish_purchase(), ("The confirmation message confirming your order completion"
-     #                                               " should be visible")
-    pass
+    assert context.product_page.cart_list_not_empty(), "The cart list should not be empty"
+    assert context.product_page.checkout_overview_text() == "Checkout: Overview", "Title is not expected"
+    assert context.product_page.payment_information(), "The payment information should be visible"
+    assert context.product_page.finish_purchase(), ("The confirmation message confirming your order completion"
+                                                    " should be visible")
+
