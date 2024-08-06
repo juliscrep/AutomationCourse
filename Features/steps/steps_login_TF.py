@@ -16,8 +16,8 @@ def step_impl(context, username, password):
 
 @then(u'shows home page')
 def step_impl(context):
-    assert context.login_page.get_text_header() == "Swag Labs", "Header is not expected"
-    assert context.login_page.header_visible(), "Header is not expected"
+    assert context.login_page.get_text_title() == "Products", "Title is not expected"
+    assert context.login_page.product_section_visible(), "Product section should be visible"
 
 
 

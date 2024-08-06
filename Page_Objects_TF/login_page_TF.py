@@ -9,7 +9,8 @@ class LoginPageTF(BasePageTF):
     __username_field = (By.ID, "user-name")
     __password_field = (By.ID, "password")
     __login_button = (By.NAME, "login-button")
-    _header_locator = (By.XPATH, "//DIV[@class='app_logo'][text()='Swag Labs']")
+    _product_title = (By.XPATH, "//SPAN[@class='title'][text()='Products']")
+    _product_list = (By.XPATH, "//DIV[@id='inventory_container']")
 
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
@@ -22,8 +23,8 @@ class LoginPageTF(BasePageTF):
         super()._type(self.__password_field, password)
         super()._click(self.__login_button)
 
-    def header_visible(self) -> bool:
-        return super()._is_displayed(self._header_locator)
+    def product_section_visible(self) -> bool:
+        return super()._is_displayed(self._product_title) and super()._is_displayed(self._product_title)
 
-    def get_text_header(self) -> str:
-        return super()._get_text(self._header_locator)
+    def get_text_title(self) -> str:
+        return super()._get_text(self._product_title)
