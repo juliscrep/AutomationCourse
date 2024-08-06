@@ -24,7 +24,8 @@ class LoginPageTF(BasePageTF):
         super()._click(self.__login_button)
 
     def product_section_visible(self) -> bool:
-        return super()._is_displayed(self._product_title) and super()._is_displayed(self._product_title)
+        super()._wait_until_element_is_visible(self._product_list, 10)
+        return super()._is_displayed(self._product_title) and super()._is_displayed(self._product_list)
 
     def get_text_title(self) -> str:
         return super()._get_text(self._product_title)

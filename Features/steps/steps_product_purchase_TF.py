@@ -8,7 +8,8 @@ def step_impl(context, username, password):
     context.login_page = LoginPageTF(context.driver)
     context.login_page.open()
     context.login_page.execute_login(username, password)
-    assert context.login_page.get_text_header() == "Swag Labs", "Header is not expected"
+    assert context.login_page.get_text_title() == "Products", "Title is not expected"
+    assert context.login_page.product_section_visible(), "Product section should be visible"
 
 
 @when(u'the user selects the product to add to the shopping cart')
@@ -37,6 +38,6 @@ def step_impl(context):
     assert context.product_page.cart_list_not_empty(), "The cart list should not be empty"
     assert context.product_page.checkout_overview_text() == "Checkout: Overview", "Title is not expected"
     assert context.product_page.payment_information(), "The payment information should be visible"
-    assert context.product_page.finish_purchase(), ("The confirmation message confirming your order completion"
+    assert context.product_page.finish_purchase(), ("The message confirming your order completion"
                                                     " should be visible")
 

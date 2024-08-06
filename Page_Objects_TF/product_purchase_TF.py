@@ -40,7 +40,6 @@ class ProductPageTF(BasePageTF):
         return super()._is_displayed(self._cart_item)
 
     def checkout(self):
-        super()._wait_until_element_is_visible(self._checkout_button, 10)
         super()._click(self._checkout_button)
 
     def checkout_title(self) -> bool:
