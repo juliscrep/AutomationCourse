@@ -4,10 +4,10 @@ Feature: Product purchase
 
   Scenario Outline: Product purchase
     Given the user successfully logs in using the username "<username>" and password "<password>"
-    When the user selects the product named "<product_name>" to add to the shopping cart
+    When the user selects the product to add to the shopping cart
     And goes to the shopping cart and checks out
-    Then the user completes the checkout information using first name "<first_name>", last name "<last_name>" and postal code "<postal_code>"
+    Then the user completes the checkout information using first name "<firstname>", last name "<lastname>" and postal code "<postalcode>"
     And finalizes the purchase order
     Examples:
-      | username      | password     | product_name        | first_name | last_name | postal_code |
-      | standard_user | secret_sauce | Sauce Labs Backpack | Julieta    | Screpnik  | 5000        |
+      | username      | password     |  firstname | lastname | postalcode |
+      | standard_user | secret_sauce |  julieta    | screpnik  | 5000        |

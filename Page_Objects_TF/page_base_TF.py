@@ -21,7 +21,7 @@ class BasePageTF:
     def _click(self, locator: tuple):
         self._find(locator).click()
 
-    def _wait_until_element_is_visible(self, locator: tuple, time: int = 30):
+    def _wait_until_element_is_visible(self, locator: tuple, time: int = 10):
         wait = WebDriverWait(self._driver, time)
         wait.until(ec.visibility_of_element_located(locator))
 
