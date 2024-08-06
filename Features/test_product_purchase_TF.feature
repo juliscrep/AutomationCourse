@@ -1,7 +1,7 @@
 
 Feature: Product purchase
 
-
+  @smoke
   Scenario Outline: Product purchase
     Given the user successfully logs in using the username "<username>" and password "<password>"
     When the user selects the product to add to the shopping cart
@@ -10,4 +10,4 @@ Feature: Product purchase
     And finalizes the purchase order
     Examples:
       | username      | password     |  firstname | lastname | postalcode |
-      | standard_user | secret_sauce |  julieta    | screpnik  | 5000        |
+      | standard_user | secret_sauce |  julieta    | screpnik  | 5000     |
